@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Registration Page</title>
+
+  <style media="screen">
+label
+{
+  display: block;
+  float: left;
+  text-align: right;
+  margin-right: 10px;
+}
+#field1
+{
+  background-color: skyblue;
+  /* margin-right: 40px; */
+}
+#field2
+{
+  background-color: gray;
+}
+input,select,textarea
+{
+  margin: 4px;
+  vertical-align: middle;
+}
+#lgnd1,#lgnd2
+{
+  color: red;
+}
+.button
+{
+  background-color: orange;
+  color: white;
+  width: 50px;
+  border: 1 solid gray;
+  position: relative;
+  left: 50px;
+}
+/* form
+{
+  background-color: skyblue;
+} */
+  </style>
+</head>
+
+<body>
+  <form action="action_page.php">
+
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+
+      <fieldset id="field1">
+        <legend id="lgnd1">Personal Information</legend>
+        <label for="name">Name :</label>
+
+        <input type="text" name="name" id="name" placeholder="Enter Name" minlength="8" required  autofocus><br><br>
+
+        <label for="email">Email:</label>
+
+        <input type="email" id="email" placeholder="example@gmail.com" name="email" required><br/><br>
+
+        <label for="pwd">Password:</label>
+
+        <input type="password" id="pwd" placeholder="Enter Password" name="psw" minlength="6" required><br/><br>
+
+        Re-enter Password:
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" minlength="6" required><br/><br>
+      </fieldset><br><br>
+
+      <fieldset id="field2">
+        <legend id="lgnd2">Optional Information</legend>
+        Gender :<br>
+        <input type="radio" name="gender" value="M">Male <br>
+        <input type="radio" name="gender" value="F">Female <br><br>
+        Age :
+        <input type="date" name="date" value="dd-mm-yyyy" maxlength=""><br><br>
+
+        <select class="" name="state">
+          <option value="">State Selection</option>
+          <option value="AP">AndhraPradesh</option>
+          <option value="TS">Telangana</option>
+          <option value="UP">UttarPradesh</option>
+
+        </select><br><br>
+
+
+        Praesent Address :<br>
+        <textarea name="addr"></textarea><br><br>
+        Permanent Address :<br>
+        <textarea name="addr"></textarea><br><br>
+
+        Hobbies : <br>
+        <input type="checkbox" name="ch1" value="Playing Games">Playing Games <br>
+        <input type="checkbox" name="ch2" value="">Singing Songs <br>
+        <input type="checkbox" name="ch3" value="">Listening Music <br><br>
+
+
+        <button type="submit" class="button">Register</button><br/>
+
+        <p>Already have an account? <a href="#">Sign in</a>.</p>
+      </fieldset>
+
+
+  </form>
+</body>
+
+</html>
